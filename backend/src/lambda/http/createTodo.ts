@@ -3,10 +3,9 @@ import { APIGatewayProxyEvent, APIGatewayProxyHandler, APIGatewayProxyResult } f
 // import * as middy from 'middy'
 // import { cors } from 'middy/middlewares'
 import { CreateTodoRequest } from '../../requests/CreateTodoRequest'
-// import { getUserId } from '../utils';
 import { createToDo } from '../../businessLogic/todos'
 
-  // TODO: Implement creating a new TODO item
+  // Implement creating a new TODO item
 export const handler: APIGatewayProxyHandler = async (event: APIGatewayProxyEvent): Promise<APIGatewayProxyResult> => {
   
   console.log("Processing Event ", event);

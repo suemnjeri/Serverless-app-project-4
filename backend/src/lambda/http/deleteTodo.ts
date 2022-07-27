@@ -5,10 +5,9 @@ import { APIGatewayProxyEvent,APIGatewayProxyHandler, APIGatewayProxyResult } fr
 // import { cors, httpErrorHandler } from 'middy/middlewares'
 
 import { deleteToDo } from '../../businessLogic/todos'
-// import { getUserId } from '../utils'
 
 export const handler: APIGatewayProxyHandler = async (event: APIGatewayProxyEvent): Promise<APIGatewayProxyResult> => {
-  // TODO: Remove a TODO item by id
+  //Remove a TODO item by id
   console.log("Processing Event ", event);
   const authorization = event.headers.Authorization;
   const split = authorization.split(' ');
